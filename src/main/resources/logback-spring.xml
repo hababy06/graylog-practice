@@ -148,8 +148,8 @@
         </root>
     </springProfile>
 
-    <!-- 非 local 且非 kafka：寫檔 + Console + GELF UDP -->
-    <springProfile name="!local & !kafka">
+    <!-- udp/dev/prod：寫檔 + Console + GELF UDP -->
+    <springProfile name="dev,prod,udp">
         <root level="INFO">
             <appender-ref ref="CONSOLE" />
             <appender-ref ref="ALL_FILE" />
