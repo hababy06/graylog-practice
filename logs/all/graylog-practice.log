@@ -603,3 +603,474 @@
 2025-12-11 16:44:44.660 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:977] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Node 1 disconnected.
 2025-12-11 16:44:44.661 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:344] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Cancelled in-flight API_VERSIONS request with correlation id 52 due to node 1 being disconnected (elapsed time since creation: 1ms, elapsed time since send: 1ms, request timeout: 30000ms)
 2025-12-11 16:44:44.665 INFO  [tomcat-shutdown] [o.s.b.w.e.tomcat.GracefulShutdown:76] - Graceful shutdown complete
+2025-12-11 16:44:59.544 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:977] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Node -1 disconnected.
+2025-12-11 16:44:59.547 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:814] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-12-11 16:44:59.547 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:1105] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-12-11 16:44:59.604 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:977] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Node -1 disconnected.
+2025-12-11 16:44:59.604 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:814] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-12-11 16:44:59.604 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:1105] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-12-11 16:44:59.613 INFO  [main] [c.e.p.GraylogPracticeApplication:53] - Starting GraylogPracticeApplication using Java 17.0.12 with PID 23264 (C:\Users\s1109\IdeaProjects\practice-project\graylog-practice\target\classes started by s1109 in C:\Users\s1109\IdeaProjects\practice-project\graylog-practice)
+2025-12-11 16:44:59.616 DEBUG [main] [c.e.p.GraylogPracticeApplication:54] - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-12-11 16:44:59.617 INFO  [main] [c.e.p.GraylogPracticeApplication:658] - The following 1 profile is active: "kafka"
+2025-12-11 16:44:59.756 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:977] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Node -1 disconnected.
+2025-12-11 16:44:59.757 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:814] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-12-11 16:44:59.757 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:1105] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-12-11 16:44:59.958 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:977] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Node -1 disconnected.
+2025-12-11 16:44:59.959 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:814] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-12-11 16:44:59.959 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:1105] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-12-11 16:45:00.271 INFO  [main] [o.s.b.w.e.tomcat.TomcatWebServer:111] - Tomcat initialized with port 8081 (http)
+2025-12-11 16:45:00.275 INFO  [main] [o.a.c.core.AprLifecycleListener:168] - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-12-11 16:45:00.276 INFO  [main] [o.a.c.core.AprLifecycleListener:168] - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2025-12-11 16:45:00.278 INFO  [main] [o.a.c.core.AprLifecycleListener:168] - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-12-11 16:45:00.285 INFO  [main] [o.a.coyote.http11.Http11NioProtocol:168] - Initializing ProtocolHandler ["http-nio-8081"]
+2025-12-11 16:45:00.286 INFO  [main] [o.a.catalina.core.StandardService:168] - Starting service [Tomcat]
+2025-12-11 16:45:00.286 INFO  [main] [o.a.catalina.core.StandardEngine:168] - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-12-11 16:45:00.316 INFO  [main] [o.a.c.c.C.[Tomcat].[localhost].[/]:168] - Initializing Spring embedded WebApplicationContext
+2025-12-11 16:45:00.317 INFO  [main] [o.s.b.w.s.c.ServletWebServerApplicationContext:301] - Root WebApplicationContext: initialization completed in 666 ms
+2025-12-11 16:45:00.415 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:977] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Node -1 disconnected.
+2025-12-11 16:45:00.416 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:814] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-12-11 16:45:00.416 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:1105] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-12-11 16:45:00.586 INFO  [main] [o.a.coyote.http11.Http11NioProtocol:168] - Starting ProtocolHandler ["http-nio-8081"]
+2025-12-11 16:45:00.597 INFO  [main] [o.s.b.w.e.tomcat.TomcatWebServer:243] - Tomcat started on port 8081 (http) with context path '/'
+2025-12-11 16:45:00.603 INFO  [main] [c.e.p.GraylogPracticeApplication:59] - Started GraylogPracticeApplication in 1.751 seconds (process running for 2.261)
+2025-12-11 16:45:00.605 INFO  [main] [c.e.practice.config.LoggingConfig:22] - ========================================
+2025-12-11 16:45:00.606 INFO  [main] [c.e.practice.config.LoggingConfig:23] - 應用程式配置資訊：
+2025-12-11 16:45:00.606 INFO  [main] [c.e.practice.config.LoggingConfig:24] -   - Graylog Host: localhost
+2025-12-11 16:45:00.606 INFO  [main] [c.e.practice.config.LoggingConfig:26] -   - Graylog Port: 12201
+2025-12-11 16:45:00.606 INFO  [main] [c.e.practice.config.LoggingConfig:28] -   - Spring Profile: kafka
+2025-12-11 16:45:00.606 INFO  [main] [c.e.practice.config.LoggingConfig:30] - ========================================
+2025-12-11 16:45:00.607 INFO  [main] [c.e.practice.config.LoggingConfig:31] - 日誌配置已載入，日誌將發送到 Graylog
+2025-12-11 16:45:00.607 INFO  [main] [c.e.practice.config.LoggingConfig:32] - 請在 Graylog Web UI (http://localhost:9000) 中查看日誌
+2025-12-11 16:45:00.607 INFO  [main] [c.e.practice.config.LoggingConfig:33] - ========================================
+2025-12-11 16:45:00.607 INFO  [main] [c.e.p.GraylogPracticeApplication:36] - ========================================
+2025-12-11 16:45:00.608 INFO  [main] [c.e.p.GraylogPracticeApplication:37] - 應用程式啟動完成！
+2025-12-11 16:45:00.608 INFO  [main] [c.e.p.GraylogPracticeApplication:38] - 請訪問 http://localhost:8080/api/logs/test 開始測試
+2025-12-11 16:45:00.608 INFO  [main] [c.e.p.GraylogPracticeApplication:39] - 請確保 Graylog 服務正在運行（docker-compose up）
+2025-12-11 16:45:00.608 INFO  [main] [c.e.p.GraylogPracticeApplication:40] - ========================================
+2025-12-11 16:45:01.256 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:977] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Node -1 disconnected.
+2025-12-11 16:45:01.256 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:814] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2025-12-11 16:45:01.257 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:1105] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-12-11 16:45:02.458 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:977] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Node -1 disconnected.
+2025-12-11 16:45:02.459 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:344] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Cancelled in-flight API_VERSIONS request with correlation id 0 due to node -1 being disconnected (elapsed time since creation: 292ms, elapsed time since send: 292ms, request timeout: 30000ms)
+2025-12-11 16:45:02.459 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:1105] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-12-11 16:45:03.365 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:977] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Node -1 disconnected.
+2025-12-11 16:45:03.366 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:344] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Cancelled in-flight API_VERSIONS request with correlation id 1 due to node -1 being disconnected (elapsed time since creation: 2ms, elapsed time since send: 2ms, request timeout: 30000ms)
+2025-12-11 16:45:03.366 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:1105] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-12-11 16:45:04.283 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:977] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Node -1 disconnected.
+2025-12-11 16:45:04.284 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:344] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Cancelled in-flight API_VERSIONS request with correlation id 2 due to node -1 being disconnected (elapsed time since creation: 2ms, elapsed time since send: 2ms, request timeout: 30000ms)
+2025-12-11 16:45:04.284 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:1105] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-12-11 16:45:05.385 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:977] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Node -1 disconnected.
+2025-12-11 16:45:05.385 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:344] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Cancelled in-flight API_VERSIONS request with correlation id 3 due to node -1 being disconnected (elapsed time since creation: 2ms, elapsed time since send: 2ms, request timeout: 30000ms)
+2025-12-11 16:45:05.385 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:1105] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-12-11 16:45:06.401 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:977] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Node -1 disconnected.
+2025-12-11 16:45:06.402 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:344] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Cancelled in-flight API_VERSIONS request with correlation id 4 due to node -1 being disconnected (elapsed time since creation: 1ms, elapsed time since send: 1ms, request timeout: 30000ms)
+2025-12-11 16:45:06.402 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:1105] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-12-11 16:45:07.569 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:977] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Node -1 disconnected.
+2025-12-11 16:45:07.570 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:344] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Cancelled in-flight API_VERSIONS request with correlation id 5 due to node -1 being disconnected (elapsed time since creation: 3ms, elapsed time since send: 3ms, request timeout: 30000ms)
+2025-12-11 16:45:07.570 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:1105] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-12-11 16:45:08.542 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:977] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Node -1 disconnected.
+2025-12-11 16:45:08.543 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:344] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Cancelled in-flight API_VERSIONS request with correlation id 6 due to node -1 being disconnected (elapsed time since creation: 3ms, elapsed time since send: 3ms, request timeout: 30000ms)
+2025-12-11 16:45:08.543 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:1105] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-12-11 16:45:09.513 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:977] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Node -1 disconnected.
+2025-12-11 16:45:09.514 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:344] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Cancelled in-flight API_VERSIONS request with correlation id 7 due to node -1 being disconnected (elapsed time since creation: 1ms, elapsed time since send: 1ms, request timeout: 30000ms)
+2025-12-11 16:45:09.514 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:1105] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-12-11 16:45:10.542 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:977] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Node -1 disconnected.
+2025-12-11 16:45:10.543 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:344] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Cancelled in-flight API_VERSIONS request with correlation id 8 due to node -1 being disconnected (elapsed time since creation: 0ms, elapsed time since send: 0ms, request timeout: 30000ms)
+2025-12-11 16:45:10.543 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:1105] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-12-11 16:45:11.707 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:977] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Node -1 disconnected.
+2025-12-11 16:45:11.707 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:344] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Cancelled in-flight API_VERSIONS request with correlation id 9 due to node -1 being disconnected (elapsed time since creation: 2ms, elapsed time since send: 2ms, request timeout: 30000ms)
+2025-12-11 16:45:11.707 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:1105] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-12-11 16:45:12.787 WARN  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:1145] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Error while fetching metadata with correlation id 11 : {gelf-logs=LEADER_NOT_AVAILABLE}
+2025-12-11 16:45:12.789 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [org.apache.kafka.clients.Metadata:287] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Cluster ID: TeH5ofoTShCJviWvCCvJfA
+2025-12-11 16:46:04.894 INFO  [http-nio-8081-exec-2] [o.a.c.c.C.[Tomcat].[localhost].[/]:168] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-11 16:46:04.894 INFO  [http-nio-8081-exec-2] [o.s.web.servlet.DispatcherServlet:532] - Initializing Servlet 'dispatcherServlet'
+2025-12-11 16:46:04.894 INFO  [http-nio-8081-exec-2] [o.s.web.servlet.DispatcherServlet:554] - Completed initialization in 0 ms
+2025-12-11 16:46:04.938 INFO  [http-nio-8081-exec-2] [c.e.p.controller.LogTestController:210] - 用戶下單事件收到，order_id=SO-555, amount=1999.00 TWD
+2025-12-11 16:46:04.938 DEBUG [http-nio-8081-exec-2] [c.e.p.controller.LogTestController:211] - MDC 已帶上訂單欄位，Graylog 可直接用 order_id / channel / amount 查詢
+2025-12-11 16:46:04.938 INFO  [http-nio-8081-exec-2] [c.e.practice.service.LogTestService:32] - Service 層：開始處理資料: SO-555
+2025-12-11 16:46:04.938 DEBUG [http-nio-8081-exec-2] [c.e.practice.service.LogTestService:33] - Service 層：資料長度: 6, 資料類型: String
+2025-12-11 16:46:04.939 DEBUG [http-nio-8081-exec-2] [c.e.practice.service.LogTestService:37] - Service 層：模擬業務處理中...
+2025-12-11 16:46:04.992 DEBUG [http-nio-8081-exec-2] [c.e.practice.service.LogTestService:75] - Service 層：開始驗證資料
+2025-12-11 16:46:04.992 DEBUG [http-nio-8081-exec-2] [c.e.practice.service.LogTestService:89] - Service 層：資料驗證通過
+2025-12-11 16:46:04.993 DEBUG [http-nio-8081-exec-2] [c.e.practice.service.LogTestService:99] - Service 層：開始處理資料邏輯
+2025-12-11 16:46:04.993 DEBUG [http-nio-8081-exec-2] [c.e.practice.service.LogTestService:104] - Service 層：資料轉換完成: SO-555 -> SO-555
+2025-12-11 16:46:04.993 INFO  [http-nio-8081-exec-2] [c.e.practice.service.LogTestService:45] - Service 層：資料處理完成，結果: SO-555
+2025-12-11 16:46:17.509 INFO  [http-nio-8081-exec-3] [c.e.p.controller.LogTestController:105] - 開始測試異常日誌記錄
+2025-12-11 16:46:17.510 ERROR [http-nio-8081-exec-3] [c.e.p.controller.LogTestController:112] - 業務邏輯驗證失敗: 這是一個測試異常，用於展示異常日誌的記錄方式
+java.lang.IllegalArgumentException: 這是一個測試異常，用於展示異常日誌的記錄方式
+	at com.example.practice.controller.LogTestController.testException(LogTestController.java:108)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-12-11 16:46:18.133 INFO  [http-nio-8081-exec-5] [c.e.p.controller.LogTestController:105] - 開始測試異常日誌記錄
+2025-12-11 16:46:18.134 ERROR [http-nio-8081-exec-5] [c.e.p.controller.LogTestController:112] - 業務邏輯驗證失敗: 這是一個測試異常，用於展示異常日誌的記錄方式
+java.lang.IllegalArgumentException: 這是一個測試異常，用於展示異常日誌的記錄方式
+	at com.example.practice.controller.LogTestController.testException(LogTestController.java:108)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-12-11 16:50:40.950 INFO  [http-nio-8081-exec-7] [c.e.p.controller.LogTestController:210] - 用戶下單事件收到，order_id=SO-555, amount=1999.00 TWD
+2025-12-11 16:50:40.951 DEBUG [http-nio-8081-exec-7] [c.e.p.controller.LogTestController:211] - MDC 已帶上訂單欄位，Graylog 可直接用 order_id / channel / amount 查詢
+2025-12-11 16:50:40.951 INFO  [http-nio-8081-exec-7] [c.e.practice.service.LogTestService:32] - Service 層：開始處理資料: SO-555
+2025-12-11 16:50:40.951 DEBUG [http-nio-8081-exec-7] [c.e.practice.service.LogTestService:33] - Service 層：資料長度: 6, 資料類型: String
+2025-12-11 16:50:40.951 DEBUG [http-nio-8081-exec-7] [c.e.practice.service.LogTestService:37] - Service 層：模擬業務處理中...
+2025-12-11 16:50:41.003 DEBUG [http-nio-8081-exec-7] [c.e.practice.service.LogTestService:75] - Service 層：開始驗證資料
+2025-12-11 16:50:41.003 DEBUG [http-nio-8081-exec-7] [c.e.practice.service.LogTestService:89] - Service 層：資料驗證通過
+2025-12-11 16:50:41.003 DEBUG [http-nio-8081-exec-7] [c.e.practice.service.LogTestService:99] - Service 層：開始處理資料邏輯
+2025-12-11 16:50:41.004 DEBUG [http-nio-8081-exec-7] [c.e.practice.service.LogTestService:104] - Service 層：資料轉換完成: SO-555 -> SO-555
+2025-12-11 16:50:41.004 INFO  [http-nio-8081-exec-7] [c.e.practice.service.LogTestService:45] - Service 層：資料處理完成，結果: SO-555
+2025-12-11 16:50:41.996 INFO  [http-nio-8081-exec-8] [c.e.p.controller.LogTestController:210] - 用戶下單事件收到，order_id=SO-555, amount=1999.00 TWD
+2025-12-11 16:50:41.996 DEBUG [http-nio-8081-exec-8] [c.e.p.controller.LogTestController:211] - MDC 已帶上訂單欄位，Graylog 可直接用 order_id / channel / amount 查詢
+2025-12-11 16:50:41.996 INFO  [http-nio-8081-exec-8] [c.e.practice.service.LogTestService:32] - Service 層：開始處理資料: SO-555
+2025-12-11 16:50:41.996 DEBUG [http-nio-8081-exec-8] [c.e.practice.service.LogTestService:33] - Service 層：資料長度: 6, 資料類型: String
+2025-12-11 16:50:41.996 DEBUG [http-nio-8081-exec-8] [c.e.practice.service.LogTestService:37] - Service 層：模擬業務處理中...
+2025-12-11 16:50:42.048 DEBUG [http-nio-8081-exec-8] [c.e.practice.service.LogTestService:75] - Service 層：開始驗證資料
+2025-12-11 16:50:42.048 DEBUG [http-nio-8081-exec-8] [c.e.practice.service.LogTestService:89] - Service 層：資料驗證通過
+2025-12-11 16:50:42.048 DEBUG [http-nio-8081-exec-8] [c.e.practice.service.LogTestService:99] - Service 層：開始處理資料邏輯
+2025-12-11 16:50:42.048 DEBUG [http-nio-8081-exec-8] [c.e.practice.service.LogTestService:104] - Service 層：資料轉換完成: SO-555 -> SO-555
+2025-12-11 16:50:42.048 INFO  [http-nio-8081-exec-8] [c.e.practice.service.LogTestService:45] - Service 層：資料處理完成，結果: SO-555
+2025-12-11 16:52:25.249 INFO  [http-nio-8081-exec-1] [c.e.p.controller.LogTestController:210] - 用戶下單事件收到，order_id=SO-555, amount=1999.00 TWD
+2025-12-11 16:52:25.249 DEBUG [http-nio-8081-exec-1] [c.e.p.controller.LogTestController:211] - MDC 已帶上訂單欄位，Graylog 可直接用 order_id / channel / amount 查詢
+2025-12-11 16:52:25.249 INFO  [http-nio-8081-exec-1] [c.e.practice.service.LogTestService:32] - Service 層：開始處理資料: SO-555
+2025-12-11 16:52:25.249 DEBUG [http-nio-8081-exec-1] [c.e.practice.service.LogTestService:33] - Service 層：資料長度: 6, 資料類型: String
+2025-12-11 16:52:25.250 DEBUG [http-nio-8081-exec-1] [c.e.practice.service.LogTestService:37] - Service 層：模擬業務處理中...
+2025-12-11 16:52:25.314 DEBUG [http-nio-8081-exec-1] [c.e.practice.service.LogTestService:75] - Service 層：開始驗證資料
+2025-12-11 16:52:25.314 DEBUG [http-nio-8081-exec-1] [c.e.practice.service.LogTestService:89] - Service 層：資料驗證通過
+2025-12-11 16:52:25.314 DEBUG [http-nio-8081-exec-1] [c.e.practice.service.LogTestService:99] - Service 層：開始處理資料邏輯
+2025-12-11 16:52:25.314 DEBUG [http-nio-8081-exec-1] [c.e.practice.service.LogTestService:104] - Service 層：資料轉換完成: SO-555 -> SO-555
+2025-12-11 16:52:25.314 INFO  [http-nio-8081-exec-1] [c.e.practice.service.LogTestService:45] - Service 層：資料處理完成，結果: SO-555
+2025-12-11 16:54:25.373 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:977] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Node -1 disconnected.
+2025-12-11 17:53:17.712 INFO  [SpringApplicationShutdownHook] [o.s.b.w.e.tomcat.GracefulShutdown:54] - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 17:53:18.076 INFO  [tomcat-shutdown] [o.s.b.w.e.tomcat.GracefulShutdown:76] - Graceful shutdown complete
+2025-12-11 17:53:21.031 INFO  [main] [c.e.p.GraylogPracticeApplication:53] - Starting GraylogPracticeApplication using Java 17.0.12 with PID 49596 (C:\Users\s1109\IdeaProjects\practice-project\graylog-practice\target\classes started by s1109 in C:\Users\s1109\IdeaProjects\practice-project\graylog-practice)
+2025-12-11 17:53:21.034 DEBUG [main] [c.e.p.GraylogPracticeApplication:54] - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-12-11 17:53:21.035 INFO  [main] [c.e.p.GraylogPracticeApplication:658] - The following 1 profile is active: "kafka"
+2025-12-11 17:53:21.344 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [org.apache.kafka.clients.Metadata:287] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Cluster ID: TeH5ofoTShCJviWvCCvJfA
+2025-12-11 17:53:21.716 INFO  [main] [o.s.b.w.e.tomcat.TomcatWebServer:111] - Tomcat initialized with port 8081 (http)
+2025-12-11 17:53:21.718 INFO  [main] [o.a.c.core.AprLifecycleListener:168] - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-12-11 17:53:21.719 INFO  [main] [o.a.c.core.AprLifecycleListener:168] - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2025-12-11 17:53:21.726 INFO  [main] [o.a.c.core.AprLifecycleListener:168] - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-12-11 17:53:21.738 INFO  [main] [o.a.coyote.http11.Http11NioProtocol:168] - Initializing ProtocolHandler ["http-nio-8081"]
+2025-12-11 17:53:21.741 INFO  [main] [o.a.catalina.core.StandardService:168] - Starting service [Tomcat]
+2025-12-11 17:53:21.741 INFO  [main] [o.a.catalina.core.StandardEngine:168] - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-12-11 17:53:21.792 INFO  [main] [o.a.c.c.C.[Tomcat].[localhost].[/]:168] - Initializing Spring embedded WebApplicationContext
+2025-12-11 17:53:21.793 INFO  [main] [o.s.b.w.s.c.ServletWebServerApplicationContext:301] - Root WebApplicationContext: initialization completed in 707 ms
+2025-12-11 17:53:22.013 INFO  [main] [o.a.coyote.http11.Http11NioProtocol:168] - Starting ProtocolHandler ["http-nio-8081"]
+2025-12-11 17:53:22.022 INFO  [main] [o.s.b.w.e.tomcat.TomcatWebServer:243] - Tomcat started on port 8081 (http) with context path '/'
+2025-12-11 17:53:22.030 INFO  [main] [c.e.p.GraylogPracticeApplication:59] - Started GraylogPracticeApplication in 1.616 seconds (process running for 2.11)
+2025-12-11 17:53:22.032 INFO  [main] [c.e.practice.config.LoggingConfig:22] - ========================================
+2025-12-11 17:53:22.033 INFO  [main] [c.e.practice.config.LoggingConfig:23] - 應用程式配置資訊：
+2025-12-11 17:53:22.033 INFO  [main] [c.e.practice.config.LoggingConfig:24] -   - Graylog Host: localhost
+2025-12-11 17:53:22.033 INFO  [main] [c.e.practice.config.LoggingConfig:26] -   - Graylog Port: 12201
+2025-12-11 17:53:22.034 INFO  [main] [c.e.practice.config.LoggingConfig:28] -   - Spring Profile: kafka
+2025-12-11 17:53:22.034 INFO  [main] [c.e.practice.config.LoggingConfig:30] - ========================================
+2025-12-11 17:53:22.034 INFO  [main] [c.e.practice.config.LoggingConfig:31] - 日誌配置已載入，日誌將發送到 Graylog
+2025-12-11 17:53:22.034 INFO  [main] [c.e.practice.config.LoggingConfig:32] - 請在 Graylog Web UI (http://localhost:9000) 中查看日誌
+2025-12-11 17:53:22.034 INFO  [main] [c.e.practice.config.LoggingConfig:33] - ========================================
+2025-12-11 17:53:22.034 INFO  [main] [c.e.p.GraylogPracticeApplication:36] - ========================================
+2025-12-11 17:53:22.034 INFO  [main] [c.e.p.GraylogPracticeApplication:37] - 應用程式啟動完成！
+2025-12-11 17:53:22.035 INFO  [main] [c.e.p.GraylogPracticeApplication:38] - 請訪問 http://localhost:8080/api/logs/test 開始測試
+2025-12-11 17:53:22.035 INFO  [main] [c.e.p.GraylogPracticeApplication:39] - 請確保 Graylog 服務正在運行（docker-compose up）
+2025-12-11 17:53:22.036 INFO  [main] [c.e.p.GraylogPracticeApplication:40] - ========================================
+2025-12-11 17:53:53.203 INFO  [http-nio-8081-exec-2] [o.a.c.c.C.[Tomcat].[localhost].[/]:168] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-11 17:53:53.204 INFO  [http-nio-8081-exec-2] [o.s.web.servlet.DispatcherServlet:532] - Initializing Servlet 'dispatcherServlet'
+2025-12-11 17:53:53.205 INFO  [http-nio-8081-exec-2] [o.s.web.servlet.DispatcherServlet:554] - Completed initialization in 1 ms
+2025-12-11 17:54:35.543 INFO  [SpringApplicationShutdownHook] [o.s.b.w.e.tomcat.GracefulShutdown:54] - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 17:54:35.929 INFO  [tomcat-shutdown] [o.s.b.w.e.tomcat.GracefulShutdown:76] - Graceful shutdown complete
+2025-12-11 17:54:39.808 INFO  [main] [c.e.p.GraylogPracticeApplication:53] - Starting GraylogPracticeApplication using Java 17.0.12 with PID 44788 (C:\Users\s1109\IdeaProjects\practice-project\graylog-practice\target\classes started by s1109 in C:\Users\s1109\IdeaProjects\practice-project\graylog-practice)
+2025-12-11 17:54:39.810 DEBUG [main] [c.e.p.GraylogPracticeApplication:54] - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-12-11 17:54:39.811 INFO  [main] [c.e.p.GraylogPracticeApplication:658] - The following 1 profile is active: "kafka"
+2025-12-11 17:54:40.052 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [org.apache.kafka.clients.Metadata:287] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Cluster ID: TeH5ofoTShCJviWvCCvJfA
+2025-12-11 17:54:40.404 INFO  [main] [o.s.b.w.e.tomcat.TomcatWebServer:111] - Tomcat initialized with port 8081 (http)
+2025-12-11 17:54:40.406 INFO  [main] [o.a.c.core.AprLifecycleListener:168] - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-12-11 17:54:40.406 INFO  [main] [o.a.c.core.AprLifecycleListener:168] - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2025-12-11 17:54:40.411 INFO  [main] [o.a.c.core.AprLifecycleListener:168] - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-12-11 17:54:40.421 INFO  [main] [o.a.coyote.http11.Http11NioProtocol:168] - Initializing ProtocolHandler ["http-nio-8081"]
+2025-12-11 17:54:40.423 INFO  [main] [o.a.catalina.core.StandardService:168] - Starting service [Tomcat]
+2025-12-11 17:54:40.424 INFO  [main] [o.a.catalina.core.StandardEngine:168] - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-12-11 17:54:40.474 INFO  [main] [o.a.c.c.C.[Tomcat].[localhost].[/]:168] - Initializing Spring embedded WebApplicationContext
+2025-12-11 17:54:40.474 INFO  [main] [o.s.b.w.s.c.ServletWebServerApplicationContext:301] - Root WebApplicationContext: initialization completed in 617 ms
+2025-12-11 17:54:40.695 INFO  [main] [o.a.coyote.http11.Http11NioProtocol:168] - Starting ProtocolHandler ["http-nio-8081"]
+2025-12-11 17:54:40.704 INFO  [main] [o.s.b.w.e.tomcat.TomcatWebServer:243] - Tomcat started on port 8081 (http) with context path '/'
+2025-12-11 17:54:40.710 INFO  [main] [c.e.p.GraylogPracticeApplication:59] - Started GraylogPracticeApplication in 1.674 seconds (process running for 2.203)
+2025-12-11 17:54:40.712 INFO  [main] [c.e.practice.config.LoggingConfig:22] - ========================================
+2025-12-11 17:54:40.712 INFO  [main] [c.e.practice.config.LoggingConfig:23] - 應用程式配置資訊：
+2025-12-11 17:54:40.712 INFO  [main] [c.e.practice.config.LoggingConfig:24] -   - Graylog Host: localhost
+2025-12-11 17:54:40.712 INFO  [main] [c.e.practice.config.LoggingConfig:26] -   - Graylog Port: 12201
+2025-12-11 17:54:40.712 INFO  [main] [c.e.practice.config.LoggingConfig:28] -   - Spring Profile: kafka
+2025-12-11 17:54:40.712 INFO  [main] [c.e.practice.config.LoggingConfig:30] - ========================================
+2025-12-11 17:54:40.712 INFO  [main] [c.e.practice.config.LoggingConfig:31] - 日誌配置已載入，日誌將發送到 Graylog
+2025-12-11 17:54:40.713 INFO  [main] [c.e.practice.config.LoggingConfig:32] - 請在 Graylog Web UI (http://localhost:9000) 中查看日誌
+2025-12-11 17:54:40.713 INFO  [main] [c.e.practice.config.LoggingConfig:33] - ========================================
+2025-12-11 17:54:40.713 INFO  [main] [c.e.p.GraylogPracticeApplication:36] - ========================================
+2025-12-11 17:54:40.713 INFO  [main] [c.e.p.GraylogPracticeApplication:37] - 應用程式啟動完成！
+2025-12-11 17:54:40.713 INFO  [main] [c.e.p.GraylogPracticeApplication:38] - 請訪問 http://localhost:8080/api/logs/test 開始測試
+2025-12-11 17:54:40.713 INFO  [main] [c.e.p.GraylogPracticeApplication:39] - 請確保 Graylog 服務正在運行（docker-compose up）
+2025-12-11 17:54:40.713 INFO  [main] [c.e.p.GraylogPracticeApplication:40] - ========================================
+2025-12-11 18:03:40.127 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:977] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Node -1 disconnected.
+2025-12-11 18:05:24.242 INFO  [SpringApplicationShutdownHook] [o.s.b.w.e.tomcat.GracefulShutdown:54] - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 18:05:24.498 INFO  [tomcat-shutdown] [o.s.b.w.e.tomcat.GracefulShutdown:76] - Graceful shutdown complete
+2025-12-11 18:17:24.247 INFO  [main] [c.e.p.GraylogPracticeApplication:53] - Starting GraylogPracticeApplication using Java 17.0.12 with PID 35476 (C:\Users\s1109\IdeaProjects\practice-project\graylog-practice\target\classes started by s1109 in C:\Users\s1109\IdeaProjects\practice-project\graylog-practice)
+2025-12-11 18:17:24.248 DEBUG [main] [c.e.p.GraylogPracticeApplication:54] - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-12-11 18:17:24.249 INFO  [main] [c.e.p.GraylogPracticeApplication:658] - The following 1 profile is active: "kafka"
+2025-12-11 18:17:24.518 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [org.apache.kafka.clients.Metadata:364] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Cluster ID: TeH5ofoTShCJviWvCCvJfA
+2025-12-11 18:17:24.883 INFO  [main] [o.s.b.w.e.tomcat.TomcatWebServer:111] - Tomcat initialized with port 8081 (http)
+2025-12-11 18:17:24.885 INFO  [main] [o.a.c.core.AprLifecycleListener:173] - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2025-12-11 18:17:24.887 INFO  [main] [o.a.c.core.AprLifecycleListener:173] - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2025-12-11 18:17:24.890 INFO  [main] [o.a.c.core.AprLifecycleListener:173] - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2025-12-11 18:17:24.896 INFO  [main] [o.a.coyote.http11.Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8081"]
+2025-12-11 18:17:24.897 INFO  [main] [o.a.catalina.core.StandardService:173] - Starting service [Tomcat]
+2025-12-11 18:17:24.897 INFO  [main] [o.a.catalina.core.StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-12-11 18:17:24.933 INFO  [main] [o.a.c.c.C.[Tomcat].[localhost].[/]:173] - Initializing Spring embedded WebApplicationContext
+2025-12-11 18:17:24.933 INFO  [main] [o.s.b.w.s.c.ServletWebServerApplicationContext:301] - Root WebApplicationContext: initialization completed in 640 ms
+2025-12-11 18:17:24.975 INFO  [main] [o.a.k.c.consumer.ConsumerConfig:372] - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-alert-service-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = alert-service
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-12-11 18:17:24.981 INFO  [main] [o.a.k.c.t.i.KafkaMetricsCollector:269] - initializing Kafka metrics collector
+2025-12-11 18:17:25.011 INFO  [main] [o.a.kafka.common.utils.AppInfoParser:124] - Kafka version: 3.8.1
+2025-12-11 18:17:25.011 INFO  [main] [o.a.kafka.common.utils.AppInfoParser:125] - Kafka commitId: 70d6ff42debf7e17
+2025-12-11 18:17:25.011 INFO  [main] [o.a.kafka.common.utils.AppInfoParser:126] - Kafka startTimeMs: 1765448245011
+2025-12-11 18:17:25.013 INFO  [main] [o.a.k.c.c.i.LegacyKafkaConsumer:476] - [Consumer clientId=consumer-alert-service-1, groupId=alert-service] Subscribed to topic(s): gelf-logs
+2025-12-11 18:17:25.014 INFO  [main] [c.e.practice.alert.AlertListener:84] - AlertListener started. bootstrapServers=localhost:9092, topic=gelf-logs, groupId=alert-service
+2025-12-11 18:17:25.023 INFO  [alert-listener] [org.apache.kafka.clients.Metadata:364] - [Consumer clientId=consumer-alert-service-1, groupId=alert-service] Cluster ID: TeH5ofoTShCJviWvCCvJfA
+2025-12-11 18:17:25.025 INFO  [alert-listener] [o.a.k.c.c.i.ConsumerCoordinator:936] - [Consumer clientId=consumer-alert-service-1, groupId=alert-service] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-12-11 18:17:25.031 INFO  [alert-listener] [o.a.k.c.c.i.ConsumerCoordinator:604] - [Consumer clientId=consumer-alert-service-1, groupId=alert-service] (Re-)joining group
+2025-12-11 18:17:25.046 INFO  [alert-listener] [o.a.k.c.c.i.ConsumerCoordinator:1102] - [Consumer clientId=consumer-alert-service-1, groupId=alert-service] Request joining group due to: need to re-join with the given member-id: consumer-alert-service-1-6dbef367-487a-42e7-89ca-01862951914b
+2025-12-11 18:17:25.046 INFO  [alert-listener] [o.a.k.c.c.i.ConsumerCoordinator:604] - [Consumer clientId=consumer-alert-service-1, groupId=alert-service] (Re-)joining group
+2025-12-11 18:17:25.260 INFO  [main] [o.a.coyote.http11.Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8081"]
+2025-12-11 18:17:25.268 INFO  [main] [o.s.b.w.e.tomcat.TomcatWebServer:243] - Tomcat started on port 8081 (http) with context path '/'
+2025-12-11 18:17:25.275 INFO  [main] [c.e.p.GraylogPracticeApplication:59] - Started GraylogPracticeApplication in 1.624 seconds (process running for 2.068)
+2025-12-11 18:17:25.277 INFO  [main] [c.e.practice.config.LoggingConfig:22] - ========================================
+2025-12-11 18:17:25.277 INFO  [main] [c.e.practice.config.LoggingConfig:23] - 應用程式配置資訊：
+2025-12-11 18:17:25.277 INFO  [main] [c.e.practice.config.LoggingConfig:24] -   - Graylog Host: localhost
+2025-12-11 18:17:25.277 INFO  [main] [c.e.practice.config.LoggingConfig:26] -   - Graylog Port: 12201
+2025-12-11 18:17:25.277 INFO  [main] [c.e.practice.config.LoggingConfig:28] -   - Spring Profile: kafka
+2025-12-11 18:17:25.277 INFO  [main] [c.e.practice.config.LoggingConfig:30] - ========================================
+2025-12-11 18:17:25.277 INFO  [main] [c.e.practice.config.LoggingConfig:31] - 日誌配置已載入，日誌將發送到 Graylog
+2025-12-11 18:17:25.277 INFO  [main] [c.e.practice.config.LoggingConfig:32] - 請在 Graylog Web UI (http://localhost:9000) 中查看日誌
+2025-12-11 18:17:25.278 INFO  [main] [c.e.practice.config.LoggingConfig:33] - ========================================
+2025-12-11 18:17:25.278 INFO  [main] [c.e.p.GraylogPracticeApplication:36] - ========================================
+2025-12-11 18:17:25.278 INFO  [main] [c.e.p.GraylogPracticeApplication:37] - 應用程式啟動完成！
+2025-12-11 18:17:25.278 INFO  [main] [c.e.p.GraylogPracticeApplication:38] - 請訪問 http://localhost:8080/api/logs/test 開始測試
+2025-12-11 18:17:25.278 INFO  [main] [c.e.p.GraylogPracticeApplication:39] - 請確保 Graylog 服務正在運行（docker-compose up）
+2025-12-11 18:17:25.278 INFO  [main] [c.e.p.GraylogPracticeApplication:40] - ========================================
+2025-12-11 18:17:28.058 INFO  [alert-listener] [o.a.k.c.c.i.ConsumerCoordinator:665] - [Consumer clientId=consumer-alert-service-1, groupId=alert-service] Successfully joined group with generation Generation{generationId=1, memberId='consumer-alert-service-1-6dbef367-487a-42e7-89ca-01862951914b', protocol='range'}
+2025-12-11 18:17:28.062 INFO  [alert-listener] [o.a.k.c.c.i.ConsumerCoordinator:663] - [Consumer clientId=consumer-alert-service-1, groupId=alert-service] Finished assignment for group at generation 1: {consumer-alert-service-1-6dbef367-487a-42e7-89ca-01862951914b=Assignment(partitions=[gelf-logs-0])}
+2025-12-11 18:17:28.075 INFO  [alert-listener] [o.a.k.c.c.i.ConsumerCoordinator:842] - [Consumer clientId=consumer-alert-service-1, groupId=alert-service] Successfully synced group in generation Generation{generationId=1, memberId='consumer-alert-service-1-6dbef367-487a-42e7-89ca-01862951914b', protocol='range'}
+2025-12-11 18:17:28.076 INFO  [alert-listener] [o.a.k.c.c.i.ConsumerCoordinator:323] - [Consumer clientId=consumer-alert-service-1, groupId=alert-service] Notifying assignor about the new Assignment(partitions=[gelf-logs-0])
+2025-12-11 18:17:28.078 INFO  [alert-listener] [o.a.k.c.c.i.ConsumerRebalanceListenerInvoker:57] - [Consumer clientId=consumer-alert-service-1, groupId=alert-service] Adding newly assigned partitions: gelf-logs-0
+2025-12-11 18:17:28.083 INFO  [alert-listener] [o.a.k.c.c.i.ConsumerCoordinator:1506] - [Consumer clientId=consumer-alert-service-1, groupId=alert-service] Found no committed offset for partition gelf-logs-0
+2025-12-11 18:17:28.094 INFO  [alert-listener] [o.a.k.c.c.i.SubscriptionState:398] - [Consumer clientId=consumer-alert-service-1, groupId=alert-service] Resetting offset for partition gelf-logs-0 to position FetchPosition{offset=530, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}.
+2025-12-11 18:17:47.211 INFO  [http-nio-8081-exec-2] [o.a.c.c.C.[Tomcat].[localhost].[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-11 18:17:47.211 INFO  [http-nio-8081-exec-2] [o.s.web.servlet.DispatcherServlet:532] - Initializing Servlet 'dispatcherServlet'
+2025-12-11 18:17:47.212 INFO  [http-nio-8081-exec-2] [o.s.web.servlet.DispatcherServlet:554] - Completed initialization in 0 ms
+2025-12-11 18:17:47.250 ERROR [http-nio-8081-exec-2] [c.e.p.controller.DemoEventController:29] - 主電源故障 (MAIN_FAIL) deviceId=dev-123
+2025-12-11 18:17:47.269 INFO  [alert-listener] [c.e.practice.alert.AlertListener:117] - 記錄 MAIN_FAIL, deviceId=dev-123, ts=2025-12-11T10:17:47.268Z
+2025-12-11 18:17:53.784 ERROR [http-nio-8081-exec-5] [c.e.p.controller.DemoEventController:47] - 備用電源故障 (BACKUP_FAIL) deviceId=dev-123
+2025-12-11 18:17:53.796 WARN  [alert-listener] [c.e.practice.alert.AlertListener:122] - 【告警】主電 + 備用電同時故障 deviceId=dev-123 (within 300000 ms)
+2025-12-11 18:26:24.576 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:1017] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Node -1 disconnected.
+2025-12-11 18:26:25.085 INFO  [alert-listener] [o.apache.kafka.clients.NetworkClient:1017] - [Consumer clientId=consumer-alert-service-1, groupId=alert-service] Node -1 disconnected.
+2025-12-11 18:28:34.059 ERROR [http-nio-8081-exec-7] [c.e.p.controller.DemoEventController:29] - 主電源故障 (MAIN_FAIL) deviceId=dev-123
+2025-12-11 18:28:34.070 INFO  [alert-listener] [c.e.practice.alert.AlertListener:117] - 記錄 MAIN_FAIL, deviceId=dev-123, ts=2025-12-11T10:28:34.070Z
+2025-12-11 18:28:41.019 ERROR [http-nio-8081-exec-8] [c.e.p.controller.DemoEventController:47] - 備用電源故障 (BACKUP_FAIL) deviceId=dev-123
+2025-12-11 18:28:41.028 WARN  [alert-listener] [c.e.practice.alert.AlertListener:122] - 【告警】主電 + 備用電同時故障 deviceId=dev-123 (within 300000 ms)
+2025-12-11 18:33:22.616 ERROR [http-nio-8081-exec-10] [c.e.p.controller.DemoEventController:29] - 主電源故障 (MAIN_FAIL) deviceId=dev-123
+2025-12-11 18:33:22.636 INFO  [alert-listener] [c.e.practice.alert.AlertListener:117] - 記錄 MAIN_FAIL, deviceId=dev-123, ts=2025-12-11T10:33:22.636Z
+2025-12-11 18:33:25.497 ERROR [http-nio-8081-exec-1] [c.e.p.controller.DemoEventController:47] - 備用電源故障 (BACKUP_FAIL) deviceId=dev-123
+2025-12-11 18:33:25.506 WARN  [alert-listener] [c.e.practice.alert.AlertListener:122] - 【告警】主電 + 備用電同時故障 deviceId=dev-123 (within 300000 ms)
+2025-12-11 18:35:20.615 ERROR [http-nio-8081-exec-3] [c.e.p.controller.DemoEventController:29] - 主電源故障 (MAIN_FAIL) deviceId=dev-123
+2025-12-11 18:35:20.635 INFO  [alert-listener] [c.e.practice.alert.AlertListener:117] - 記錄 MAIN_FAIL, deviceId=dev-123, ts=2025-12-11T10:35:20.635Z
+2025-12-11 18:35:25.181 ERROR [http-nio-8081-exec-6] [c.e.p.controller.DemoEventController:47] - 備用電源故障 (BACKUP_FAIL) deviceId=dev-123
+2025-12-11 18:35:25.198 WARN  [alert-listener] [c.e.practice.alert.AlertListener:122] - 【告警】主電 + 備用電同時故障 deviceId=dev-123 (within 300000 ms)
+2025-12-11 18:36:24.594 INFO  [kafka-producer-network-thread | gelf-kafka-appender-GELF_KAFKA_CORE] [o.apache.kafka.clients.NetworkClient:1017] - [Producer clientId=gelf-kafka-appender-GELF_KAFKA_CORE] Node -1 disconnected.
+2025-12-11 18:36:25.104 INFO  [alert-listener] [o.apache.kafka.clients.NetworkClient:1017] - [Consumer clientId=consumer-alert-service-1, groupId=alert-service] Node -1 disconnected.
