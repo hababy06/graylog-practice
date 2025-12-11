@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: graylog-practice
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+  # Kafka 配置（用於 GELF Kafka）
+  # 注意：應用程式運行在主機上，所以使用 localhost:9092
+  # Graylog Input 配置需要使用 kafka:9092（容器間通訊）
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    topic: ${KAFKA_TOPIC:gelf-logs}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+server:
+  port: 8081
+
+graylog:
+  host: ${GRAYLOG_HOST:localhost}
+  port: ${GRAYLOG_PORT:12201}
+
+logging:
+  level:
+    root: INFO
+    com.example.practice: DEBUG
+

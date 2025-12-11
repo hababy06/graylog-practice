@@ -1,0 +1,4 @@
+2025-12-11 10:48:13.763 INFO  [SpringApplicationShutdownHook] [o.s.b.w.e.tomcat.GracefulShutdown:54] - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 10:48:14.382 INFO  [tomcat-shutdown] [o.s.b.w.e.tomcat.GracefulShutdown:76] - Graceful shutdown complete
+2025-12-11 15:53:18.297 INFO  [SpringApplicationShutdownHook] [o.s.b.w.e.tomcat.GracefulShutdown:54] - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 15:53:18.551 INFO  [tomcat-shutdown] [o.s.b.w.e.tomcat.GracefulShutdown:76] - Graceful shutdown complete

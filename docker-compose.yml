@@ -1,0 +1,126 @@
+version: '3'
+services:
+  # 1. MongoDB: 用來存儲 Graylog 的設定資料 (使用者、儀表板配置等)
+  mongodb:
+    image: mongo:7.0
+    container_name: graylog-mongo
+    restart: always
+    environment:
+      - TZ=Asia/Taipei
+    volumes:
+      - mongodb_data:/data/db
+
+  # 2. Data Node: Graylog 託管的 OpenSearch (取代獨立 OpenSearch)
+  # Data Node 是 Graylog 6.0+ 引入的新架構，由 Graylog 自動管理 OpenSearch
+  datanode:
+    image: graylog/graylog-datanode:7.0
+    container_name: graylog-datanode
+    restart: always
+    hostname: datanode
+    environment:
+      # Node ID 檔案位置
+      - GRAYLOG_DATANODE_NODE_ID_FILE=/var/lib/graylog-datanode/node-id
+      # 密碼鹽（必須與 Graylog 一致）
+      - GRAYLOG_DATANODE_PASSWORD_SECRET=somepasswordpepper
+      # root 密碼 SHA2（必須與 Graylog 一致）
+      - GRAYLOG_DATANODE_ROOT_PASSWORD_SHA2=8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918
+      # MongoDB 連線（與 Graylog 共用同一個 MongoDB）
+      - GRAYLOG_DATANODE_MONGODB_URI=mongodb://mongodb:27017/graylog
+      # 時區設定
+      - TZ=Asia/Taipei
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    volumes:
+      - datanode_data:/var/lib/graylog-datanode
+    ports:
+      - "9200:9200"  # OpenSearch API（選用，用於除錯）
+      - "9300:9300"  # OpenSearch Transport（選用）
+
+  # 3. Zookeeper: Kafka 的依賴服務
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.0
+    container_name: kafka-zookeeper
+    restart: always
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+      TZ: Asia/Taipei
+    ports:
+      - "2181:2181"
+
+  # 4. Kafka: 訊息佇列服務（用於 GELF Kafka）
+  kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: kafka-server
+    restart: always
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_LOG_RETENTION_HOURS: 168  # 保留 7 天
+      KAFKA_LOG_SEGMENT_BYTES: 1073741824  # 1GB
+      TZ: Asia/Taipei
+    ports:
+      - "9092:9092"
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+
+  # 5. Graylog: 核心伺服器
+  graylog:
+    image: graylog/graylog:7.0.1
+    container_name: graylog-server
+    restart: always
+    depends_on:
+      - datanode
+      - mongodb
+      - kafka  # 添加 Kafka 依賴（可選，用於 GELF Kafka Input）
+    entrypoint: /usr/bin/tini -- /docker-entrypoint.sh
+    environment:
+      # 密碼鹽 (隨意亂碼即可)
+      GRAYLOG_PASSWORD_SECRET: somepasswordpepper
+      # root 密碼: "admin" 的 SHA2 雜湊值
+      GRAYLOG_ROOT_PASSWORD_SHA2: 8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918
+      GRAYLOG_HTTP_BIND_ADDRESS: "0.0.0.0:9000"
+      GRAYLOG_HTTP_EXTERNAL_URI: "http://localhost:9000/"
+      # 告訴 Graylog 資料庫的位置叫做 "mongodb" (對應最上面的 service 名稱)
+      GRAYLOG_MONGODB_URI: "mongodb://mongodb:27017/graylog"
+      # 使用 Data Node 時，不需要設定 GRAYLOG_ELASTICSEARCH_HOSTS
+      # Graylog 會自動發現 Data Node（通過 MongoDB 和 Preflight 介面）
+      # GRAYLOG_ELASTICSEARCH_HOSTS: "http://datanode:9200"
+      # SMTP 設定（使用公司測試環境郵件伺服器）
+      # 注意：環境變數名稱使用下劃線，值不需要引號（但保留也可以）
+      GRAYLOG_TRANSPORT_EMAIL_ENABLED: "true"
+      GRAYLOG_TRANSPORT_EMAIL_HOSTNAME: "mail.heaven-only.com"
+      GRAYLOG_TRANSPORT_EMAIL_PORT: "25"
+      GRAYLOG_TRANSPORT_EMAIL_USE_AUTH: "true"
+      GRAYLOG_TRANSPORT_EMAIL_USE_TLS: "false"
+      GRAYLOG_TRANSPORT_EMAIL_USE_SSL: "false"
+      GRAYLOG_TRANSPORT_EMAIL_AUTH_USERNAME: "hoservice@heaven-only.com"
+      GRAYLOG_TRANSPORT_EMAIL_AUTH_PASSWORD: "Ho27816077~"
+      GRAYLOG_TRANSPORT_EMAIL_FROM_EMAIL: "hoservice@heaven-only.com"
+      GRAYLOG_TRANSPORT_EMAIL_WEB_INTERFACE_URL: "http://localhost:9000"
+      # 時區設定（台灣時區）
+      # 1. 設定 Graylog admin 帳號登入後的預設時區 (解決網頁顯示問題)
+      GRAYLOG_ROOT_TIMEZONE: "Asia/Taipei"
+      # 2. 設定 Linux 容器本身的系統時區 (解決 Log 接收時間錯亂問題)
+      TZ: "Asia/Taipei"
+    ports:
+      - "9000:9000"            # Web 介面
+      - "12201:12201/udp"      # GELF UDP (接收 Log 的主要入口)
+    volumes:
+      - graylog_data:/usr/share/graylog/data
+
+volumes:
+  mongodb_data:
+  datanode_data:  # 改用 datanode_data（取代 opensearch_data）
+  graylog_data:
+  kafka_data:  # Kafka 資料持久化

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds">
+
+    <!-- 基本屬性 -->
+    <property name="LOG_PATH" value="${LOG_PATH:-./logs}" />
+    <property name="LOG_FILE_NAME" value="${LOG_FILE_NAME:-graylog-practice}" />
+    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] [%logger{36}:%line] - %msg%n" />
+
+    <!-- Console -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder charset="UTF-8">
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Rolling file: all -->
+    <appender name="ALL_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/all/${LOG_FILE_NAME}.log</file>
+        <encoder charset="UTF-8">
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/all/${LOG_FILE_NAME}-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <!-- Rolling file: error only -->
+    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/error/${LOG_FILE_NAME}-error.log</file>
+        <encoder charset="UTF-8">
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/error/${LOG_FILE_NAME}-error-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <!-- 讀取 Spring Profile，預設 dev -->
+    <springProperty scope="context" name="activeProfile" source="spring.profiles.active" defaultValue="dev" />
+    
+    <!-- 讀取 Kafka 配置 -->
+    <springProperty scope="context" name="kafkaBootstrapServers" source="spring.kafka.bootstrap-servers" defaultValue="localhost:9092" />
+    <springProperty scope="context" name="kafkaTopic" source="spring.kafka.topic" defaultValue="gelf-logs" />
+
+    <!-- Graylog GELF UDP (啟用於非 local 環境) -->
+    <springProfile name="!local">
+        <appender name="GELF" class="de.siegmar.logbackgelf.GelfUdpAppender">
+            <graylogHost>${GRAYLOG_HOST:-localhost}</graylogHost>
+            <graylogPort>${GRAYLOG_PORT:-12201}</graylogPort>
+            <maxChunkSize>508</maxChunkSize>
+            <encoder class="de.siegmar.logbackgelf.GelfEncoder">
+                <originHost>${HOSTNAME:-${spring.application.name}}</originHost>
+                <includeRawMessage>false</includeRawMessage>
+                <includeMarker>true</includeMarker>
+                <includeMdcData>true</includeMdcData>
+                <includeCallerData>false</includeCallerData>
+                <includeRootCauseData>true</includeRootCauseData>
+                <includeLevelName>true</includeLevelName>
+                <shortPatternLayout class="ch.qos.logback.classic.PatternLayout">
+                    <pattern>%m%nopex</pattern>
+                </shortPatternLayout>
+                <fullPatternLayout class="ch.qos.logback.classic.PatternLayout">
+                    <pattern>%m%n</pattern>
+                </fullPatternLayout>
+                <staticField>application:${spring.application.name:-graylog-practice}</staticField>
+                <staticField>environment:${ENVIRONMENT:-${activeProfile}}</staticField>
+            </encoder>
+        </appender>
+    </springProfile>
+
+    <!-- Graylog GELF Kafka (啟用於 kafka profile) -->
+    <!-- 使用自訂的 GelfKafkaAppender + AsyncAppender（推薦方案） -->
+    <!-- 優點：完全控制、不依賴已歸檔庫、學習價值高 -->
+    <springProfile name="kafka">
+        <!-- 核心 Kafka Appender -->
+        <appender name="GELF_KAFKA_CORE" class="com.example.practice.config.GelfKafkaAppender">
+            <encoder class="de.siegmar.logbackgelf.GelfEncoder">
+                <originHost>${HOSTNAME:-${spring.application.name}}</originHost>
+                <includeRawMessage>false</includeRawMessage>
+                <includeMarker>true</includeMarker>
+                <includeMdcData>true</includeMdcData>
+                <includeCallerData>false</includeCallerData>
+                <includeRootCauseData>true</includeRootCauseData>
+                <includeLevelName>true</includeLevelName>
+                <shortPatternLayout class="ch.qos.logback.classic.PatternLayout">
+                    <pattern>%m%nopex</pattern>
+                </shortPatternLayout>
+                <fullPatternLayout class="ch.qos.logback.classic.PatternLayout">
+                    <pattern>%m%n</pattern>
+                </fullPatternLayout>
+                <staticField>application:${spring.application.name:-graylog-practice}</staticField>
+                <staticField>environment:${ENVIRONMENT:-${activeProfile}}</staticField>
+            </encoder>
+            <topic>${kafkaTopic}</topic>
+            <bootstrapServers>${kafkaBootstrapServers}</bootstrapServers>
+        </appender>
+        
+        <!-- 使用 AsyncAppender 包裝，提升效能（不阻塞應用程式） -->
+        <appender name="GELF_KAFKA" class="ch.qos.logback.classic.AsyncAppender">
+            <appender-ref ref="GELF_KAFKA_CORE" />
+            <!-- 隊列大小：當隊列滿時，丟棄最舊的日誌（避免記憶體溢出） -->
+            <queueSize>512</queueSize>
+            <!-- 是否丟棄最舊的日誌（當隊列滿時） -->
+            <discardingThreshold>0</discardingThreshold>
+            <!-- 是否包含 caller 資料（會影響效能） -->
+            <includeCallerData>false</includeCallerData>
+            <!-- 是否永不阻塞（true：隊列滿時丟棄，false：隊列滿時阻塞） -->
+            <neverBlock>true</neverBlock>
+        </appender>
+    </springProfile>
+    
+    <!-- 備選方案：使用 logback-kafka-appender（已歸檔，有維護風險） -->
+    <!--
+    <springProfile name="kafka-archived">
+        <appender name="GELF_KAFKA" class="com.github.danielwegener.logback.kafka.KafkaAppender">
+            <encoder class="de.siegmar.logbackgelf.GelfEncoder">
+                ...
+            </encoder>
+            <topic>${kafkaTopic}</topic>
+            <keyingStrategy class="com.github.danielwegener.logback.kafka.keying.NoKeyKeyingStrategy" />
+            <deliveryStrategy class="com.github.danielwegener.logback.kafka.delivery.AsynchronousDeliveryStrategy" />
+            <producerConfig>
+                bootstrap.servers=${kafkaBootstrapServers}
+                ...
+            </producerConfig>
+        </appender>
+    </springProfile>
+    -->
+
+    <!-- Application logger -->
+    <logger name="com.example.practice" level="DEBUG" />
+
+    <!-- Root logger 分 profile 定義，避免 <springProfile> 嵌套警告 -->
+
+    <!-- local：只寫本機檔案與 Console -->
+    <springProfile name="local">
+        <root level="INFO">
+            <appender-ref ref="CONSOLE" />
+            <appender-ref ref="ALL_FILE" />
+            <appender-ref ref="ERROR_FILE" />
+        </root>
+    </springProfile>
+
+    <!-- 非 local 且非 kafka：寫檔 + Console + GELF UDP -->
+    <springProfile name="!local & !kafka">
+        <root level="INFO">
+            <appender-ref ref="CONSOLE" />
+            <appender-ref ref="ALL_FILE" />
+            <appender-ref ref="ERROR_FILE" />
+            <appender-ref ref="GELF" />
+        </root>
+    </springProfile>
+
+    <!-- kafka：寫檔 + Console + GELF Kafka（Async 包裝） -->
+    <springProfile name="kafka">
+        <root level="INFO">
+            <appender-ref ref="CONSOLE" />
+            <appender-ref ref="ALL_FILE" />
+            <appender-ref ref="ERROR_FILE" />
+            <appender-ref ref="GELF_KAFKA" />
+        </root>
+    </springProfile>
+
+</configuration>
